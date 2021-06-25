@@ -1,7 +1,9 @@
 {{page-title "ReproduceBsButtonOnClickEventHandlerSilentlyCatchingErrors"}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<BsButton @onClick={{this.syncThrow}}>
+  sync @onClick handler, which throws
+</BsButton>
 
-{{outlet}}
+<BsButton @onClick={{this.asyncThrow}}>
+  async @onClick handler, which throws
+</BsButton>
